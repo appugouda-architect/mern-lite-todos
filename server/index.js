@@ -7,7 +7,13 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-let todos = ['Sample todo item']; // in-memory list { id, text, done }
+let todos = [
+	{
+		id: '1',
+		text: 'first todo',
+		done: false,
+	},
+]; // in-memory list { id, text, done }
 
 app.get('/', (req, res) => {
 	res.json({ message: 'Welcome to the Todo API!' });
