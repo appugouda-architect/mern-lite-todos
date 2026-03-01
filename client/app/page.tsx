@@ -7,7 +7,7 @@ type Todo = { id: string; text: string; done: boolean };
 export default function Home() {
 	const [todos, setTodos] = useState<Todo[]>([]);
 	const [text, setText] = useState('');
-	const apiBase = process.env.NEXT_PUBLIC_API_BASE || 'http://localhost:8000';
+	const apiBase = process.env.NEXT_PUBLIC_API_BASE || 'http://localhost:9000';
 	console.log(apiBase);
 
 	async function load() {
